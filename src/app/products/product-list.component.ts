@@ -4,11 +4,12 @@ import { Component } from '@angular/core';
     selector: 'app-products',
     templateUrl: './product-list.component.html'
 })
-export class ProductListComponent{
+export class ProductListComponent {
     pageTitle: string = "Product List";
-    imageWidth: number = 50;
+    imageWidth: number = 40;
     imageMargin: number = 2;
-     //for cases where data type is not specified
+    showImage: boolean = false;
+    //for cases where data type is not specified
     products: any[] = [
         {
             "productId": 1,
@@ -19,8 +20,8 @@ export class ProductListComponent{
             "price": 19.95,
             "starRating": 3.2,
             "imageUrl": "https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-          },
-          {
+        },
+        {
             "productId": 2,
             "productName": "Garden Cart",
             "productCode": "GDN-0023",
@@ -29,8 +30,8 @@ export class ProductListComponent{
             "price": 32.99,
             "starRating": 4.2,
             "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-          },
-          {
+        },
+        {
             "productId": 5,
             "productName": "Hammer",
             "productCode": "TBX-0048",
@@ -39,8 +40,8 @@ export class ProductListComponent{
             "price": 8.9,
             "starRating": 4.8,
             "imageUrl": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-          },
-          {
+        },
+        {
             "productId": 8,
             "productName": "Saw",
             "productCode": "TBX-0022",
@@ -49,8 +50,8 @@ export class ProductListComponent{
             "price": 11.55,
             "starRating": 3.7,
             "imageUrl": "https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
-          },
-          {
+        },
+        {
             "productId": 10,
             "productName": "Video Game Controller",
             "productCode": "GMG-0042",
@@ -59,6 +60,10 @@ export class ProductListComponent{
             "price": 35.95,
             "starRating": 4.6,
             "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
-          }
+        }
     ];
+
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 }
