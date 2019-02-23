@@ -8,11 +8,12 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { StarComponent } from './products/shared/star.component';
 import { ConvertToSpacePipe } from './products/shared/convert-to-spaces.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, ProductListComponent, ConvertToSpacePipe, StarComponent],
   imports: [BrowserModule,
-    AppRoutingModule, FormsModule],
+    AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 
