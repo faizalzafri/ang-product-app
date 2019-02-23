@@ -43,7 +43,9 @@
                         <td>{{product.productCode | lowercase | ConvertToSpaces:'-'}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price | currency:'INR':'&#8377;':'1.0-0' }}</td>
-                        <td><app-star></app-star></td>
+                        <td>
+                            <app-star [rating]='product.starRating'></app-star>
+                        </td>
                     </tr>
                 </tbody>
             </table>
