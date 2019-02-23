@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
+import { StarComponent } from './products/shared/star.component';
 import { ConvertToSpacePipe } from './products/shared/convert-to-spaces.pipe';
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, ConvertToSpacePipe],
+  declarations: [AppComponent, ProductListComponent, ConvertToSpacePipe, StarComponent],
   imports: [BrowserModule,
     AppRoutingModule, FormsModule],
   providers: [],
